@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="testngpraktikum2-Parallel-suite" parallel="classes" thread-count="2" verbose="1">
+    <test name="Parallel-test">
+        <classes>
+            <class name="com.juaracoding.testngpraktikum2.TestClassA" />
+            <class name="com.juaracoding.testngpraktikum2.TestClassB" />
+        </classes>
+    </test>
+</suite>
