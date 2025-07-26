@@ -9,21 +9,21 @@ Buat riset sederhana tentang tingkat paralel pada suatu test.
 
 Langkah Pembuatan
 --
-1. membuat 2 class yang saya beri nama:TestClassA & TestClassB
-2. di setiap masing-masing class, diberikan 4 method pegujian sederhana
-3. diberikan juga tiap masing-masing method berupa thread sleep = 3000
-4. buat folder/package resources di folder test 
-5. buat testng.xml pada folder/package resources
-6. buat sequencetest.xml yang berisi sequence dan 
-7. buat paralleltest.xml untuk parallel nya
-7. atur bagian pom.xml nya menambahkan maven testng, dan tambahkan
+1. membuat 2 class yang beri nama:TestClassA & TestClassB
+2. di setiap masing-masing class, diberikan 2 method pegujian sederhana
+3. diberikan perulangan (for) di masing-masing method dari 2 class untuk memberi beban kerja pengganti dari thread.sleep. 
+apabila ingin menggunakan thread.sleep juga bisa
+4. buat folder/package resources di folder test
+6. buat sequencetest.xml yang berisi sequence di folder/package resources dan 
+7. buat paralleltest.xml di folder/package resources untuk parallel nya
+8. atur bagian pom.xml nya menambahkan maven testng, dan tambahkan di bagian configuration:
    <suiteXmlFile>src/test/resources/sequencetest.xml</suiteXmlFile>
    <suiteXmlFile>src/test/resources/paralleltest.xml</suiteXmlFile>
-8. jika sudah, maka dapat dijalankan melalui terminal jika menggunakan vscode
-9. jika dijalankan menggunakan intiliej maka bisa memilih sidebar kiri maven, klik clean & test secara bersamaan, lalu klik run
-10. untuk menjalankan dibagian pom nya, di setting, yg mana mau dijalankan dulu, sequence atau parallel nya
-11. untuk melihat report, bisa ke folder target, cari "surefire-reports" dan pilih index.html, open with browser
-12. maka akan terlihat perbandingannya dibawah berikut
+9. jika sudah, maka dapat dijalankan melalui terminal jika menggunakan vscode
+10. jika dijalankan menggunakan intiliej maka bisa memilih sidebar kiri maven, klik clean & test secara bersamaan, lalu klik run
+11. untuk menjalankan test, dibagian pom nya tepat di configuration, di pilih, yg mana mau dijalankan dulu, sequence atau parallel .xml nya
+12. untuk melihat report, bisa ke folder target, cari "surefire-reports" dan pilih index.html, open with browser 
+13. maka akan terlihat perbandingannya dibawah berikut
 
 Hasil Pengujian
 --
