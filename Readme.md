@@ -32,16 +32,24 @@ dengan method A01 = 17ms, A02 = 3ms, B01 = 2ms, B02 = 1ms.
 
 ![img_2.png](img_2.png)
 
+dengan di terminal total time nya kurang lebih 8 detik:
+
+![img_6.png](img_6.png)
+
 2. Parallel: dari gambar berikut dapat ditarik kesimpulan bahwa "total running time = 35 ms"
    dengan method A01 = 16ms, A02 = 16ms, B01 = 2ms, B02 = 1ms. dengan thread.count = 2
 
 ![img_3.png](img_3.png)
+
+dengan di terminal nya total time nya kurang lebih 9 detik:
+
+![img_7.png](img_7.png)
 
 Kesimpulan
 --
 
 1. Sequnce akan berjalan sesuai urutan, namun parallel bisa berjalan bersamaan di thread yang berbeda,
 terlihat waktu eksekusi nya ada yg sama di parallel, maka penggunaan parallel sudah benar
-2. Parallel tidak selalu lebih cepat
-banyak faktor kenapa ini bisa terjadi, bisa karna ram pc user atau overhead dari pembentukkan dan pengelolaan thread
+2. Ideal nya secara repot parallel lebih cepat dari sequence, tapi Parallel tidak selalu lebih cepat.
+   banyak faktor kenapa ini bisa terjadi, bisa karna ram pc user atau overhead dari pembentukkan dan pengelolaan thread
 3. parallel cocok untuk menjalankan banyak test case, sehingga mempercepat total waktu testing secara signifikan
